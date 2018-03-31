@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <h1>Hangman Game!</h1>
+  <p id="score"></p>
+  <p id="demo"></p>
+  <!-- 
+  <p id="demo"></p> -->
+    Enter your guess:
+    <input type="text" id="userInput" onkeyup="gamePick()">
+    
+  
+  <script>
+    // assign variables
+    var choices1 = ["a", "b", "c"];
+    var score = 0;
+    var gameEndIndex = 0;
+    var userInput = "";
+    // functions
+    function gamePick() {
+      document.getElementById("demo").innerHTML =
+        choices1[Math.floor(Math.random() * 3)];
+        
+    }
+    function updateScore() {
+      document.querySelector("#score").innerHTML = "Score: " + score;
+    }
+    // document.write(choices1[Math.floor(Math.random() * 3)]);
+    // main process
+    updateScore();
+    // document.onkeyup = function (event) {
+    //   var userInput = String.fromCharCode(event.which).toLowerCase();
+    //   if (userInput === "a") {
+    //     alert("Correct!");
+    //   }
+    // }
+    </script>
+  </bodyl>
+</html>
